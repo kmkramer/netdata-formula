@@ -1,0 +1,10 @@
+{% set netcat = salt['grains.filter_by']({
+    'default': {
+        'pkg': 'nc',
+    },
+    'Scientific' : {
+      'G@osmajorrelease:7': {
+          'pkg': 'nmap-ncat',
+    },
+  },
+}, ) %}
